@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    div {
+        display: flex;
+    }
+</style>
+
+<body>
+    
+    <h1>User Profile</h1>
+    <div>
+        <h4>Name:</h4>
+        <h4 id="name">Joel</h4>
+    </div>
+    <div>
+        <h4>Age:</h4>
+        <h4 id="age">15</h4>
+    </div>
+    <div>
+        <h4>Sex:</h4>
+        <h4 id="sex"></h4>
+    </div>
+    <div>
+        <h4>phoneNumber:</h4>
+        <h4 id="phoneNumber"></h4>
+    </div>
+    <div>
+        <h4>Address:</h4>
+        <h4 id="address"></h4>
+    </div>
+
+    Name: <input type="text" id="nameInput" placeholder="Name">
+    Age: <input type="text" placeholder="Age">
+    Sex: <input type="text" placeholder="Sex">
+    <button onclick="fillUserDetails()">Click to fill user details</button>
+
+
+<script>
+
+    let user = {
+        name: null,
+        age: null,
+        sex: null,
+    }
+
+    let nameInput = document.getElementById("nameInput")
+    let nameValue = nameInput.value 
+    user.name = nameValue
+
+    function fillUserDetails() {
+        let nameInput = document.getElementById("nameInput")
+        let nameValue = nameInput.value 
+        user.name = nameValue
+        let name = document.getElementById("name")
+        name.innerHTML = user.name
+    }
+
+    let car = {
+        name: "Audi A4",
+        year: 2014,
+        color: "white", 
+        brandNew: false,
+        owners: {
+            firstOwner: { 
+                name: "Brian",
+                phoneNumber: 776234234,
+            },
+        },
+        taxBracket: null,
+        milage: undefined
+    }
+
+    car.milage = 60000
+    car.owners.firstOwner.age = 25
+    car.leatherSeats = true
+    car.bootSize = "20 litres"
+
+    car = {}
+
+    car.name = "BMW"
+    car.color = "Black"
+    car.drive = "Xdrive"
+    
+    // let printCar = `
+    //     car name: ${car["name"]}
+    //     car year of make: ${car["year"]}
+    //     car first owner: ${car["owners"]["firstOwner"]["name"]}
+    //     car milage: ${car.milage}
+    // `
+
+    console.log(car)
+
+
+
+
+</script>
+</body>
+</html>
+
