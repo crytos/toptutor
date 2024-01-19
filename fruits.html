@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h1>Hello fruits</h1>
+
+<h3>Fruits Basket</h3>
+<p id="fruitsBasketOutPut">
+
+</p>
+
+<input type="text" placeholder="Enter Fruit" id="fruitInput" autofocus>
+<button onclick="addFruit()">Add Fruit</button>
+<button onclick="sortFruits()">Sort fruits</button>
+<button onclick="reverseFruits()">Reserse fruits list</button>
+
+<script>
+    // Delaring and arry variable
+    let fruits = [];
+    
+    fruits = ["Mangoes", "Oranges", "avocados", "tomatoes"]
+
+    // Add item to the end of the list
+    fruits.push("Papaya")
+    fruits.push("pineaple")
+    fruits.push("kiwi")
+
+    // Add item to the start of the list
+    fruits.unshift("Water melon")
+    // Length of the list(How many items are  in the list)
+    let fruitsCount = fruits.length;
+
+    // Replacing a certain item in the list
+    fruits[1] = "Pear"
+
+    // Inserting a certain item in a certain position in the list
+    fruits.splice(1, 0, "Banana")
+
+    console.log(fruits, fruitsCount)
+
+    // 
+
+    let fruitsBasket = []; //fruits basket list
+    let fruitInput = document.getElementById("fruitInput"); // fruit input
+    let fruitsBasketOutPut = document.getElementById("fruitsBasketOutPut") //fruitsBasket display
+
+    // adding fruits to the fruits basket
+    function addFruit() {
+        fruitsBasket.push(fruitInput.value)
+        fruitsBasketOutPut.innerHTML = fruitsBasket
+        fruitInput.value = null
+    }
+
+    function sortFruits() {
+        fruitsBasket.sort()
+        fruitsBasketOutPut.innerHTML = fruitsBasket
+    }
+
+    function reverseFruits() {
+        fruitsBasket.reverse()
+        fruitsBasketOutPut.innerHTML = fruitsBasket
+    }
+
+</script>
+</body>
+</html>
