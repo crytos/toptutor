@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+
+html{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+</style>
+
+<body>
+    
+    <h1>User Profile</h1>
+    <div>
+        <h4>Name:</h4>
+        <span id="name"></span>
+    </div>
+    <div>
+        <h4>Age:</h4>
+        <span id="age"></span>
+    </div>
+    <div>
+        <h4>Sex:</h4>
+        <span id="sex"></span>
+    </div>
+    <br>
+
+    Name: <input type="text" id="nameInput" placeholder="Name">
+    Age: <input type="text" id="ageInput" placeholder="Age">
+    Sex: <input type="text" id="sexInput" placeholder="Sex">
+    <button onclick="fillUserDetails()">Click to fill user details</button>
+    <br><br>
+    <button onclick="saveUserToDatabase()">Save User to Database</button>
+
+
+<script>
+
+    // input user details 
+    let nameInput = document.getElementById("nameInput");
+    let ageInput = document.getElementById("ageInput");
+    let sexInput = document.getElementById("sexInput");
+
+    // User object
+    let user = {
+        name: null,
+        age: null,
+        sex: null,
+    }
+
+    // display entered user details
+    let name = document.getElementById("name");
+    let age = document.getElementById("age");
+    let sex = document.getElementById("sex");
+
+    function fillUserDetails() {
+        // fill in details to user object
+        user.name = nameInput.value
+        user.age = ageInput.value
+        user.sex = sexInput.value
+
+        // fill in details to page
+        name.innerHTML = user.name
+        age.innerHTML = user.age
+        sex.innerHTML = user.sex
+    }
+
+    function saveUserToDatabase() {
+        console.log(user)
+    }
+
+
+</script>
+</body>
+</html>
+
