@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+    .item {
+        padding: 5px;
+        font-weight: 400;
+        color: coral;
+    }
+</style>
+
+<body>
+    <h1>Hello Loops!</h1>
+
+
+    <ol id="basket">
+    </ol>
+
+    <script>
+
+        // While Loop
+
+        while (1 < 3) {
+            // console.log("One is less than zero")
+            break
+        }
+
+        let counter = 0
+        while (counter < 6) {
+            // console.log("counter is ", counter)
+            counter = counter + 1
+        }
+
+        // Do While Loop
+
+        let x = 0
+        do {
+            // console.log("X is ", x)
+            x = x + 1
+        }
+        while (x < 5)
+
+        // For (begin, condition, step)
+
+        for (let n = 0; n < 5; n++) {
+            // console.log("n is ", n)
+        }
+
+        let cars = ["Mazda", "Honda", "Lambo", "Porsche", "Rolls Royce"]
+
+        for (let index = 0; index < cars.length; index++) {
+            const car = cars[index];
+            if (car == "Honda") {
+                // console.log("Japan Made")
+            }
+            // console.log(`At index ${index}, the car is ${car}`)
+            // console.log("At index " + index + ", the car is " + car)
+        }
+
+        // For in (Works with objects)
+
+        const car = {
+            name: "Audi",
+            price: 200000,
+            color: "Blue",
+            milage: 30000,
+            allWheel: true,
+        }
+
+
+        for (const key in car) {
+            // console.log(key, car[key])
+            
+            if (car[key] == "Blue") {
+                // console.log("Blue found")
+            }
+            
+            // if (key == "color") {
+            //     console.log(car[key]) //Blue
+            // }
+        }
+
+        // For of (Arrays)
+
+        let fruits = ["Mangoes", "Oranges", "Avocados", "Tomatoes", "Water melon"]
+        let basket = document.getElementById("basket") //list of items called basket 
+
+        for (let item of fruits) {
+            let basketItem = document.createElement("li") //created a list item
+            basketItem.setAttribute("class", "item")
+            basketItem.innerHTML = item //put text inside the list item element
+            basket.appendChild(basketItem)
+        }
+
+        console.log(basket)
+        
+        // ForEach (Arrays)
+
+        fruits.forEach(function (item) {
+            // let basketItem = document.createElement("li") //created a list item
+            // basketItem.setAttribute("class", "item")
+            // basketItem.innerHTML = item //put text inside the list item element
+            // basket.appendChild(basketItem)
+        })
+
+
+
+
+
+
+    </script>
+</body>
+</html>
