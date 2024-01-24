@@ -1,0 +1,18 @@
+body{
+    font-family: tahoma;
+}
+div {
+    margin-bottom: 1rem;
+}
+input {
+    padding: 5px 8px;
+    border: 2px solid lightgray;
+    border-radius: 4px;
+}
+button {
+    padding: 10px 18px;
+    background-color: greenyellow;
+    border-radius: 4px;
+    border: none;
+    font-weight: bold;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User accounts</title>
+    <link rel="stylesheet" href="userstyles.css">
+</head>
+<body>
+    <h1>User accounts</h1>
+
+    <h3>Account Registration</h3>
+
+    <div>
+        <div>
+            <label for="name">Name</label>
+            <input type="name" id="name" placeholder="Name">
+        </div>
+        <div>
+            <label for="email">Email address</label>
+            <input type="email" id="email" placeholder="email">
+        </div>
+        <div>
+            <label for="password">Password</label>
+            <input type="password" id="password" placeholder="Password">
+        </div>
+        <div>
+            <button id="register" onclick="register()">Register</button>
+        </div>
+    </div>
+
+    <hr>
+
+    <h3>Users list</h3>
+
+    <ol id="users-list">
+    </ol>
+
+    <script src="useraccounts.js"></script>
+</body>
+</html>
